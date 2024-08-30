@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { inter, josefinSans, serif } from "./font";
+import { inter, josefinSans, serif, openSans } from "./font";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-josefinSans antialiased",
+          "min-h-screen flex flex-col px-8 bg-background font-josefinSans text-typeface-1 antialiased",
           inter.variable,
           josefinSans.variable,
-          serif.variable
+          serif.variable,
+          openSans.variable
         )}
       >
         <ThemeProvider
@@ -30,7 +32,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="w-full relative">
+          <Navbar />
+          </div>
+          <main className="max-w-[1512px] w-full mx-auto py-16">
           {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

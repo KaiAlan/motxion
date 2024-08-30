@@ -21,8 +21,56 @@ const config = {
     extend: {
       fontFamily: {
         inter: ["var(--font-inter)", ...fontFamily.sans],
+        openSans: ["var(--font-openSans)", ...fontFamily.sans],
         josefinSans: ["var(--font-josefin-sans)", ...fontFamily.sans],
         serif: ["var(--font-serif)", ...fontFamily.sans],
+      },
+      fontSize: {
+        xs: ['0.75rem', {
+          lineHeight: '1rem',
+          fontWeight: '200',
+        }],
+        sm: ['0.875rem', {
+          lineHeight: '1.25rem',
+          fontWeight: '300',
+        }],
+        base: ['1.125rem', {
+          lineHeight: '1.5rem',
+          fontWeight: '400',
+        }],
+        lg: ['1.35rem', {
+          lineHeight: '1.75rem',
+          fontWeight: '500',
+        }],
+        xl: ['1.62rem', {
+          lineHeight: '2rem',
+          fontWeight: '600',
+        }],
+        '2xl': ['1.944rem', {
+          lineHeight: '2.5rem',
+          letterSpacing: '-0.01em',
+          fontWeight: '700',
+        }],
+        '3xl': ['2.333rem', {
+          lineHeight: '3rem',
+          letterSpacing: '-0.01em',
+          fontWeight: '700',
+        }],
+        '4xl': ['2.799rem', {
+          lineHeight: '3.5rem',
+          letterSpacing: '-0.02em',
+          fontWeight: '700',
+        }],
+        '5xl': ['3.359rem', {
+          lineHeight: '4rem',
+          letterSpacing: '-0.02em',
+          fontWeight: '700',
+        }],
+        '6xl': ['3.815rem', {
+          lineHeight: '5rem',
+          letterSpacing: '-0.02em',
+          fontWeight: '800',
+        }],
       },
       colors: {
         border: "hsl(var(--border))",

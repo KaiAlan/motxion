@@ -8,7 +8,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -128,6 +128,16 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      screens: {
+        'tablet': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -142,10 +152,20 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        wobble: {
+          '0%': { transform: 'rotate(90deg)' },
+          '15%': { transform: 'rotate(80deg)' },
+          '30%': { transform: 'rotate(100deg)' },
+          '45%': { transform: 'rotate(85deg)' },
+          '60%': { transform: 'rotate(95deg)' },
+          '75%': { transform: 'rotate(88deg)' },
+          '100%': { transform: 'rotate(90deg)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        wobble: 'wobble 1s ease-in-out',
       },
     },
   },

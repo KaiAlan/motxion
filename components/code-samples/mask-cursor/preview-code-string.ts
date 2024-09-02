@@ -1,5 +1,4 @@
-const previewCode = `
-"use client";
+const previewCode = `"use client";
 
 import { useState } from "react";
 import styles from "./MaskCursorEffect.module.scss";

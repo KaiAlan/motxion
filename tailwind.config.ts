@@ -67,7 +67,7 @@ const config = {
           fontWeight: '700',
         }],
         '6xl': ['3.815rem', {
-          lineHeight: '5rem',
+          lineHeight: '7rem',
           letterSpacing: '-0.02em',
           fontWeight: '800',
         }],

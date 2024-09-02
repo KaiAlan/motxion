@@ -12,14 +12,14 @@ const MaskCursorEffect = () => {
   const size = isHovered ? 300 : 40;
 
   return (
-    <main className={cn("h-[70vh] relative", styles.main)}>
+    <main className={cn("h-full relative", styles.main)}>
       <motion.div
         className={cn(
           "flex justify-center items-center text-black text-xl md:text-4xl lg:text-6xl leading-6 md:leading-10 lg:leading-[60px] cursor-default w-full h-full bg-[#ec4e39] absolute",
           styles.mask
         )}
         animate={{
-          WebkitMaskPosition: `${x! - size * 2}px ${y! - size / 2}px`,
+          WebkitMaskPosition: `${x! - (size * 2)}px ${y! - size*1.5}px`,
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "backOut", duration: 0.5 }}

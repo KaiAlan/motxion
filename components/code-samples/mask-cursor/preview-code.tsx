@@ -1,12 +1,17 @@
 import { codeToHtml } from "@/utils/code-to-html";
-import  previewCode  from "./preview-code-string";
+import { cn } from "@/lib/utils";
 
+type PreviewCodeBoxProps = {
+  previewCode: string;
+  language: string;
+  className?: string;
+}
 
-const MaskCursorPreviewCodeSample = async () => {
+const PreviewCodeBox = async ({previewCode, language, className}: PreviewCodeBoxProps) => {
 
   const html = await codeToHtml({
     code: previewCode,
-    language: "tsx",
+    language: language,
   })
     .then((html) => {
       if (html) return html;
@@ -17,13 +22,13 @@ const MaskCursorPreviewCodeSample = async () => {
       return "";
     });
   return (
-      <div className="w-full h-full flex justify-start items-center text-wrap">
+      <div className={cn("w-full h-full flex justify-start items-center text-wrap", className)}>
         <div
-          className="px-2 max-w-[1200px] w-full"
+          className="px-2 max-w-[900px]"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
   );
 };
 
-export default MaskCursorPreviewCodeSample;
+export default PreviewCodeBox;

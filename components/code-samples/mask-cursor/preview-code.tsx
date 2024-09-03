@@ -22,9 +22,9 @@ const PreviewCodeBox = async ({previewCode, language, className}: PreviewCodeBox
       return "";
     });
   return (
-      <div className={cn("w-full h-full flex justify-start items-center text-wrap", className)}>
+      <div className={cn("w-full h-full flex justify-start items-center", className)}>
         <div
-          className="px-2 max-w-[900px]"
+          className="p-2 pr-8 max-w-[900px]"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>

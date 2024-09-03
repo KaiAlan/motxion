@@ -13,7 +13,7 @@ export const codeToHtml = async ({ code, language }:{code: string, language: str
   try {
     const highlighter = await getHighlighter({
       themes: ['github-light', 'github-dark', 'tokyo-night', 'catppuccin-latte'],
-      langs: ['tsx', 'jsx', 'typescript', 'javascript', 'json'],
+      langs: ['tsx', 'jsx', 'typescript', 'javascript', 'json', 'shell'],
     });
 
     return highlighter.codeToHtml(code, {

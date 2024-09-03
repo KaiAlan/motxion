@@ -1,8 +1,9 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { inter, josefinSans, serif, openSans } from "./font";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner"
 import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
 import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({
           </div>
           <main className="max-w-[1512px] w-full mx-auto py-16">
           {children}
+          <Toaster />
           </main>
         </ThemeProvider>
       </body>

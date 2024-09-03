@@ -68,7 +68,7 @@ const Sidebar = () => {
                   href={navItem.href}
                   // onMouseEnter={() => console.log(val)}
                   className={cn(
-                    "rounded-sm px-4 py-1 text-sm font-openSans shadow-sm hover:bg-muted/50",
+                    "rounded-sm px-4 py-1 text-sm font-normal font-openSans shadow-sm hover:bg-muted/50",
                     pathname === navItem.href
                       ? "text-primary bg-muted/50"
                       : ""

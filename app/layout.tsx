@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner"
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Animuu",
@@ -20,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen flex flex-col px-8 bg-background font-openSans text-typeface-1 antialiased",
+          "min-h-screen flex flex-col bg-background font-openSans text-typeface-1 antialiased",
           inter.variable,
           josefinSans.variable,
           serif.variable,
@@ -36,10 +37,11 @@ export default function RootLayout({
           <div className="w-full relative">
           <Navbar />
           </div>
-          <main className="max-w-[1512px] w-full mx-auto py-16">
+          <main className="max-w-[1512px] w-full mx-auto px-8 py-16">
           {children}
           <Toaster />
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

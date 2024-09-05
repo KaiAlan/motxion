@@ -12,10 +12,11 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { NavConfig } from "@/config/nav";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState<boolean[]>(
-    Array(sidebarItems.length).fill(true)
+    Array(NavConfig.sidebarNav.length).fill(true)
   );
   const pathname = usePathname();
 
@@ -31,7 +32,7 @@ const Sidebar = () => {
 
   return (
     <div className="w-full flex flex-col justify-start items-start space-y-1">
-      {sidebarItems.sort().map((category, index) => (
+      {NavConfig.sidebarNav.sort().map((category, index) => (
         <Collapsible
           key={index}
           open={isOpen[index]}
@@ -66,15 +67,17 @@ const Sidebar = () => {
                 <Link
                   key={idx}
                   href={navItem.href}
+                  // aria-disabled={navItem.disabled}
                   // onMouseEnter={() => console.log(val)}
                   className={cn(
                     "rounded-sm px-4 py-1 text-sm font-normal font-openSans shadow-sm hover:bg-muted/50",
-                    pathname === navItem.href
-                      ? "text-primary bg-muted/50"
-                      : ""
+                    pathname === navItem.href ? "text-primary bg-muted/50" : "",
+                    navItem.disabled ? 'cursor-not-allowed' : ''
                   )}
                 >
+                  <button disabled={navItem.disabled}>
                   {navItem.title}
+                  </button>
                 </Link>
               );
             })}
@@ -86,61 +89,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
-type SidebarItemsType = {
-  title: string;
-  items: {
-    title: string;
-    href: string;
-  }[];
-};
-
-const sidebarItems: SidebarItemsType[] = [
-  {
-    title: "Cursor Effects",
-    items: [
-      {
-        title: "Mask Cursor",
-        href: "/components/mask-cursor",
-      },
-      {
-        title: "Trailing Cursor",
-        href: "/components/trailing-cursor",
-      },
-    ],
-  },
-  {
-    title: "Scroll Animations",
-    items: [
-      {
-        title: "Smooth Scroll",
-        href: "/components/smooth-scroll",
-      },
-      {
-        title: "Slide Scroll",
-        href: "/components/slide-scroll",
-      },
-      {
-        title: "Zoom Parallax",
-        href: "/components/zoom-parallax",
-      },
-      {
-        title: "Zoom Paralax Mountaina",
-        href: "/components/zoom-parallax-mountains",
-      },
-    ],
-  },
-  {
-    title: "SVG Animations",
-    items: [],
-  },
-  {
-    title: "Text Animations",
-    items: [
-      {
-        title: "Hackky text animation",
-        href: "/components/hackky-text-animation",
-      },
-    ],
-  },
-];

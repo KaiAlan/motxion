@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Animuu",
+  title: "Motxion",
   description: "A collection on animation compnonets made with framer motion, tailwindcss and NextJS to use in your project",
 };
 

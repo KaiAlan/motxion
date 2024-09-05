@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Separator } from "./ui/separator";
 import { usePathname } from "next/navigation";
+import { NavConfig } from "@/config/nav";
 
 
 const Navbar = () => {
@@ -13,7 +14,7 @@ const Navbar = () => {
       <Link href="/" className={pathname === "/" ? "text-primary font-bold" : "text-typeface-1 font-bold"}>
           LOGO
           </Link>
-        {navPath.map((item, index) => (
+        {NavConfig.mainNav.map((item, index) => (
           <Link key={index} href={item.href} className={pathname.startsWith(item.href) ? "text-primary font-semibold" : ""}>
           {item.title}
           </Link>
@@ -25,14 +26,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-const navPath = [
-  {
-    href: "/components",
-    title: "Components"
-  },
-  {
-    href: "/design",
-    title: "Design"
-  },
-]

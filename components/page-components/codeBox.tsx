@@ -21,7 +21,7 @@ const CodeBox = ({
     toast("Copied Successfully.");
   };
   return (
-    <div className={cn("flex max-h-[550px] h-full w-[calc(900px-theme(spacing.12))] p-1 rounded-lg overflow-x-hidden bg-muted/30 relative",
+    <div className={cn("flex max-h-[550px] h-full w-[calc(900px-theme(spacing.12))] p-1 rounded-lg overflow-x-hidden bg-card-4/30 relative",
         isPreviewCodeBox ? 'w-full': '',
         className,
     )}>

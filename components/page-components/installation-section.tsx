@@ -1,6 +1,6 @@
 
 import { Separator } from "../ui/separator";
-import PreviewCodeBox from "../code-samples/mask-cursor/preview-code";
+import PreviewCodeBox from "./preview-code";
 import { Badge } from "../ui/badge";
 import { InstructionType } from "@/types/content";
 import CodeBox from "./codeBox";

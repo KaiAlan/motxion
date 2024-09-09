@@ -4,7 +4,7 @@ import { ReactNode, Suspense } from "react";
 import Loader from "@/components/Loader";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CodeBox from "./codeBox";
-import PreviewCodeBox from "../code-samples/mask-cursor/preview-code";
+import PreviewCodeBox from "./preview-code";
 
 type PreviewSectionProps = {
   previewComponent: ReactNode;

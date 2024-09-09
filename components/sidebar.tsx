@@ -71,13 +71,13 @@ const Sidebar = () => {
                   // onMouseEnter={() => console.log(val)}
                   className={cn(
                     "rounded-sm px-4 py-1 text-sm font-normal font-openSans shadow-sm hover:bg-muted/50",
-                    pathname === navItem.href ? "text-primary bg-muted/50" : "",
+                    pathname === navItem.href ? " bg-card-4/30 text-primary" : "",
                     navItem.disabled ? 'cursor-not-allowed' : ''
                   )}
                 >
-                  <button disabled={navItem.disabled}>
+                  {/* <button disabled={navItem.disabled}> */}
                   {navItem.title}
-                  </button>
+                  {/* </button> */}
                 </Link>
               );
             })}

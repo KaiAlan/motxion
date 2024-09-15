@@ -137,6 +137,9 @@ const config = {
 
         'desktop': '1280px',
         // => @media (min-width: 1280px) { ... }
+
+        'out': '1512px',
+        // => @media (min-width: 1512px) { ... }
       },
       borderRadius: {
         lg: "var(--radius)",

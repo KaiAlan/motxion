@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="max-w-[1512px] w-full flex flex-col justify-start items-start gap-6 py-20 mx-auto">
         <div className="w-full flex justify-center items-center">
           <div className="flex flex-col items-start justify-start w-full gap-1 text-typeface-2 text-left">
-          <img src="/motxion-logo.svg" alt="logo" className="w-72 mb-4" />
+          {/* <img src="/motxion-logo.svg" alt="logo" className="w-72 mb-4" /> */}
             <p className="text-typeface-1 text-lg">
               Made with 💙 by{" "}
               <Link

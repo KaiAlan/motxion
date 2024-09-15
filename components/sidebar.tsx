@@ -45,7 +45,7 @@ const Sidebar = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="w-full flex justify-between gap-2 hover:bg-muted/50"
+                  className="w-full flex justify-between gap-2 px-0 hover:bg-muted/50"
                 >
                   <h4 className="text-base font-medium">{category.title}</h4>
                   <ChevronRightIcon
@@ -59,7 +59,7 @@ const Sidebar = () => {
               </CollapsibleTrigger>
             </div>
           )}
-          <CollapsibleContent className="flex flex-col space-y-[2px] px-2 text-typeface-2">
+          <CollapsibleContent className="flex flex-col space-y-[2px] text-typeface-2">
             {category.items.sort().map((navItem, idx) => {
 
               // let val = category.items.length + idx
@@ -70,7 +70,7 @@ const Sidebar = () => {
                   // aria-disabled={navItem.disabled}
                   // onMouseEnter={() => console.log(val)}
                   className={cn(
-                    "rounded-sm px-4 py-1 text-sm font-normal font-openSans shadow-sm hover:bg-muted/50",
+                    "rounded-sm py-1 text-sm font-normal font-openSans shadow-sm hover:bg-muted/50",
                     pathname === navItem.href ? " bg-card-4/30 text-primary" : "",
                     navItem.disabled ? 'cursor-not-allowed' : ''
                   )}

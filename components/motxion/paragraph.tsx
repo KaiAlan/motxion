@@ -23,7 +23,7 @@ export default function Paragraph({ value, className }: { value: string; classNa
   return (
     <div
       ref={element}
-      className="relative h-[calc(100vh+94*3*1vh)]"
+      className="relative h-[calc(50vh+94*2*1vh)]"
     >
       <div className={cn("sticky top-0 min-h-[100vh] text-6xl flex justify-center items-center mx-auto", className)}>
         <motion.p

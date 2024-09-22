@@ -5,7 +5,7 @@ import { Separator } from "./ui/separator";
 
 const Footer = () => {
   return (
-    <footer className="w-full">
+    <footer className="w-full z-30">
       <Separator className="w-full" />
       <div className="max-w-[1512px] w-full flex flex-col justify-start items-start gap-6 py-20 mx-auto">
         <div className="w-full flex justify-center items-center">
@@ -29,25 +29,25 @@ const Footer = () => {
               </h1>
               <Link
                 href="/components"
-                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear"
+                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear cursor-pointer"
               >
                 Gallery
               </Link>
               <Link
                 href="/components"
-                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear"
+                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear cursor-pointer"
               >
                 Components
               </Link>
               <Link
                 href="/examples"
-                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear"
+                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear cursor-pointer"
               >
                 Examples
               </Link>
               <Link
                 href="/design"
-                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear"
+                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear cursor-pointer"
               >
                 Design System
               </Link>
@@ -64,17 +64,17 @@ const Footer = () => {
               </Link>
               <Link
                 href="https://twitter.com/KaiAlan_"
-                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear"
+                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear cursor-pointer"
               >
                 Twitter
-                <ArrowTopRightIcon className="h-4 w-4 border border-muted rounded-sm group-hover/icon:translate-x-1 group-hover/icon:-translate-y-1 duration-300 ease-in-out" />
+                <ArrowTopRightIcon className="h-4 w-4 border border-muted rounded-sm group-hover/icon:translate-x-1 group-hover/icon:-translate-y-1 duration-300 ease-in-out cursor-pointer" />
               </Link>
               <Link
                 href="https://github.com/KaiAlan"
-                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear"
+                className="flex justify-center items-center gap-1 group/icon hover:scale-125 hover:translate-x-6 duration-100 ease-linear cursor-pointer"
               >
                 Github
-                <ArrowTopRightIcon className="h-4 w-4 border border-muted rounded-sm group-hover/icon:translate-x-1 group-hover/icon:-translate-y-1 duration-300 ease-in-out" />
+                <ArrowTopRightIcon className="h-4 w-4 border border-muted rounded-sm group-hover/icon:translate-x-1 group-hover/icon:-translate-y-1 duration-300 ease-in-out cursor-pointer" />
               </Link>
               {/* <Link
                 href="http://www.linkedin.com/in/kaialan"

@@ -20,7 +20,7 @@ const Navbar = () => {
               : "text-typeface-1 font-bold"
           }
         >
-          <img src="/motxion-logo.svg" alt="logo" className="w-12 z-[70]" />
+          <img src="/motxion-logo.svg" alt="logo" className="w-8 z-[70]" />
         </Link>
         <div className="flex justify-end items-center gap-6">
         {NavConfig.mainNav.map((item, index) => (

@@ -17,11 +17,6 @@ const Home = () => {
       />
       <div className="flex flex-col justify-start py-20 relative">
         <InvertedCursor />
-        <img
-          src="/bg-noise.svg"
-          alt="bg-noise-image"
-          className="w-[50rem] absolute -top-72 -left-[17%] z-[60]"
-        />
         <div className="flex flex-col items-end text-start gap-0 pb-40">
           <span className="flex flex-col gap-0">
             <span className="text-[9rem] leading-[8rem] h-[8rem] font-semibold text-left overflow-hidden">

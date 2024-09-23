@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation"
-import MaskCursorEffect from "@/components/previews/MaskCursorEffect";
 import Heading from "@/components/page-components/heading";
 import PreviewSection from "@/components/page-components/preview-section";
 import { pageContent } from "@/contents";
 import { contentType } from "@/types/content";
 import InstallationSection from "@/components/page-components/installation-section";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 
 
@@ -27,10 +27,17 @@ export default async function MaskCursorPage({ params }: { params: { slug: strin
           badges={content.contentTag}
         />
         <PreviewSection
-          previewComponent={<MaskCursorEffect />}
+          previewComponent={<content.slugContent.previewComponent />}
           code={content.slugContent.previewCode}
         />
-
+        {content.note && (
+          <Card className="my-10 rounded-md bg-muted/30 border-none">
+            <CardHeader className="pb-2 text-primary font-bold">Note</CardHeader>
+            <CardContent className="text-typeface-1 px-8">
+              <p>{content.note}</p>
+            </CardContent>
+          </Card>
+        )}
         <div id="installation">
           <InstallationSection instructions={content.slugContent.installationInstructions} />
         </div>

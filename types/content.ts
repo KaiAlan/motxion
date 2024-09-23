@@ -1,7 +1,9 @@
+
+
 export type InstructionType = {
     instruction: string;
-    instructionCode: string;
-    language: string;
+    instructionCode?: string;
+    language?: string;
     description?: string;
     fileName?: string;
 };
@@ -15,6 +17,7 @@ export type slugContentType = {
     toc: tocType[];
     installationInstructions: InstructionType[];
     previewCode: string;
+    previewComponent: () => JSX.Element;
 }
 
 export type contentType = {
@@ -23,4 +26,5 @@ export type contentType = {
     contentTitle: string
     contentDescription: string
     contentTag: string[]
+    note?: string
 }

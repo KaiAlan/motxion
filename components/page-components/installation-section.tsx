@@ -35,12 +35,14 @@ const InstallationSection = ({ instructions }: InstallationSectionProps) => {
                   {item.fileName}
                 </Badge>
               )}
-              <CodeBox code={item.instructionCode}>
-                <PreviewCodeBox
-                  previewCode={item.instructionCode}
-                  language={item.language}
-                />
-              </CodeBox>
+              {item.instructionCode && item.language && (
+                <CodeBox code={item.instructionCode}>
+                  <PreviewCodeBox
+                    previewCode={item.instructionCode}
+                    language={item.language}
+                  />
+                </CodeBox>
+              )}
             </div>
           </div>
         );

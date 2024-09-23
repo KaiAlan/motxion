@@ -1,5 +1,6 @@
 import { InstructionType, tocType } from "@/types/content";
 import previewCode from "@/components/code-samples/mask-cursor/preview-code-string";
+import MaskCursorEffect from "@/components/previews/MaskCursorEffect";
 const tableOfContents: tocType[] = [
     {
         id: "Preview",
@@ -151,5 +152,6 @@ const installationInstructions: InstructionType[] = [
 export const maskCursorPageContent = {
     toc: tableOfContents,
     installationInstructions: installationInstructions,
-    previewCode: previewCode
+    previewCode: previewCode,
+    previewComponent: MaskCursorEffect
 }

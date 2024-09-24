@@ -20,10 +20,10 @@ export const NavConfig: NavConfigType = {
     {
       title: "Cursor Effects",
       items: [
-        {
-          title: "Mask Cursor",
-          href: "/components/mask-cursor",
-        },
+        // {
+        //   title: "Mask Cursor",
+        //   href: "/components/mask-cursor",
+        // },
         {
           title: "Trailing Cursor",
           href: "/components/trailing-cursor",

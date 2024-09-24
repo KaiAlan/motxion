@@ -5,6 +5,7 @@ import { Separator } from "./ui/separator";
 import { usePathname } from "next/navigation";
 import { NavConfig } from "@/config/nav";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 // import logo from './motxion-logo.svg'
 
 const Navbar = () => {
@@ -23,16 +24,26 @@ const Navbar = () => {
           <img src="/motxion-logo.svg" alt="logo" className="w-8 z-[70]" />
         </Link>
         <div className="flex justify-end items-center gap-6">
-        {NavConfig.mainNav.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            className={pathname.startsWith(item.href) ? "text-typeface-1" : ""}
-          >
-            {item.title}
+          {NavConfig.mainNav.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className={
+                pathname.startsWith(item.href) ? "text-typeface-1" : ""
+              }
+            >
+              {item.title}
+            </Link>
+          ))}
+          <Link href="/components">
+            <Button
+              variant="default"
+              size="lg"
+              className={cn("rounded-sm", pathname === "/" ? "" : "hidden")}
+            >
+              EXPLORE
+            </Button>
           </Link>
-        ))}
-        <Button variant='default' size='lg' className="rounded-sm">EXPLORE</Button>
         </div>
       </div>
       {/* <Separator /> */}

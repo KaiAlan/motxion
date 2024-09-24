@@ -27,7 +27,7 @@ export const NavConfig: NavConfigType = {
         {
           title: "Trailing Cursor",
           href: "/components/trailing-cursor",
-          disabled: true
+          disabled: false
         },
       ],
     },

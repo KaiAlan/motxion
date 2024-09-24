@@ -33,7 +33,7 @@ export default async function MaskCursorPage({ params }: { params: { slug: strin
         {content.note && (
           <Card className="my-10 rounded-md bg-muted/30 border-none">
             <CardHeader className="pb-2 text-primary font-bold">Note</CardHeader>
-            <CardContent className="text-typeface-1 px-8">
+            <CardContent className="text-typeface-2 px-8 mb-4">
               <p>{content.note}</p>
             </CardContent>
           </Card>

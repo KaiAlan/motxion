@@ -1,5 +1,6 @@
 import { maskCursorPageContent } from "./mask-cursor"
 import { textLiftPageContent } from "./text-lift"
+import { trailingCursorPageContent } from "./trailing-cursor"
 import { wavyLinePageContent } from "./wavy-line"
 import { wavyWordPageContent } from "./wavy-word"
 import { contentType } from "@/types/content"
@@ -34,5 +35,13 @@ export const pageContent: contentType[] = [
         contentTitle: 'Text Lift',
         contentDescription: 'A Hover Lift effect animates each character of the text, creating a visual where letters lift upward on hover.',
         contentTag: ["Text Lift", "Hero Section", "Text Effect", "Hover Effect"]
+    },
+    {
+        slugName: 'trailing-cursor',
+        slugContent: trailingCursorPageContent,
+        contentTitle: 'Traailing Cursor',
+        contentDescription: 'A customizable trailing cursor effect that follows the mouse position with a smooth transition.',
+        note: 'Adjust the posX and posY values to customize the cursor\'s trailing effect relative to the mouse position. Default values are set to 500 and 300, but feel free to modify them by passing them as parameters to the component.',
+        contentTag: ["Trailing Cursor", "Cursor Effect", "Cursor Follow"]
     },
 ]

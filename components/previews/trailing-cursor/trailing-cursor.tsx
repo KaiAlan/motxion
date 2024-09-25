@@ -13,19 +13,19 @@ const TrailingCursor = ({
   duration?: number;
   className?: string;
 }) => {
-  posX = posX || 500;
-  posY = posY || 300;
+  posX = posX || 150;
+  posY = posY || 150;
   duration = duration || 3;
   const { x, y } = useMousePosition();
   return (
     <motion.div
       className={cn(
-        "h-[300px] w-[300px] rounded-full bg-gradient-to-t from-[#92209D]  via-[#D84549] to-[#D34740] blur-[50px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+        "h-[300px] w-[300px] rounded-full bg-gradient-to-t from-[#92209D]  via-[#D84549] to-[#D34740] blur-[50px] fixed top-0 left-0",
         className
       )}
       animate={{
-        left: x - posX,
-        top: y - posY,
+        x: x - posX,
+        y: y - posY,
       }}
       transition={{ type: "tween", ease: "backOut", duration: duration }}
     ></motion.div>

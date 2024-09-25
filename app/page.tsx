@@ -1,11 +1,12 @@
+
+import InvertedCursor from "@/components/previews/inverted-cursor/inverted-cursor";
 import Paragraph from "@/components/motxion/paragraph";
 import { Separator } from "@/components/ui/separator";
-import InvertedCursor from "@/components/previews/inverted-cursor/inverted-cursor";
 import { SparklesCore } from "@/components/sparkels";
 
 const Home = () => {
   return (
-    <div className="h-full w-full cursor-none">
+    <div className="h-full w-full relative cursor-none select-none">
       <SparklesCore
         background="transparent"
         minSize={0.4}
@@ -15,8 +16,8 @@ const Home = () => {
         className="w-full h-full fixed left-0 top-0"
         particleColor="#FFFFFF"
       />
-      <div className="flex flex-col justify-start py-20 relative">
-        <InvertedCursor />
+      <InvertedCursor />
+      <div className="flex flex-col justify-start py-20">
         <div className="flex flex-col items-end text-start gap-0 pb-40">
           <span className="flex flex-col gap-0">
             <span className="text-[9rem] leading-[8rem] h-[8rem] font-semibold text-left overflow-hidden">

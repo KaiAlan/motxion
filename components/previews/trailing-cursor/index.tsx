@@ -5,7 +5,7 @@ import TrailingCursor from "./trailing-cursor";
 const TrailingCursorDemo = () => {
   return (
     <div className="flex flex-col gap-10">
-      <div className="h-[60vh] w-full pt-40 relative overflow-hidden">
+      <div className="h-[500px] pt-40 relative overflow-hidden -z-10">
         <TrailingCursor />
 
         {/* TRAILLING */}

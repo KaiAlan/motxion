@@ -1,21 +1,37 @@
 'use client'
 
-import useMousePosition from "@/hooks/useMousePosition";
-import useScrollPosition from "@/hooks/useScrollPosition";
-import { motion, useScroll, useTransform } from "framer-motion";
 import Lenis from 'lenis'
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import gsap from "gsap";
 
-const InvertedCursor = () => {
-  const { scrollYProgress } = useScroll()
-  const { x: mouseX, y: mouseY } = useMousePosition()
-  const {y: scrollY } = useScrollPosition()
-  const adjustedX = useTransform(scrollYProgress, [0, 1], [mouseX! - 190, mouseX! - 190]);
-  const adjustedY = useTransform(scrollYProgress, [0, 1], [mouseY! + scrollY - 80, mouseY! + scrollY - 80]);
+export default function InvertedCursor() {
+  const mouse = useRef({ x: 0, y: 0 });
+  const circle = useRef(null);
+  const size = 30;
+
+  const manageMouseMove = (e: any) => {
+    const { clientX, clientY } = e;
+    mouse.current = {
+      x: clientX,
+      y: clientY,
+    };
+    moveCircle(mouse.current.x, mouse.current.y);
+  };
+
+  const moveCircle = (x: number, y: number) => {
+    gsap.set(circle.current, { x, y, xPercent: -50, yPercent: -50 });
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", manageMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", manageMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     const lenis = new Lenis();
-
     const raf = (time: any) => {
       lenis.raf(time);
 
@@ -23,16 +39,17 @@ const InvertedCursor = () => {
     };
     requestAnimationFrame(raf);
   }, []);
-  return (
-    <motion.span
-          className="h-6 w-6 rounded-full bg-typeface-1 mix-blend-difference absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none transform"
-          style={{
-            left: adjustedX,
-            top: adjustedY,
-          }}
-          transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
-        ></motion.span>
-  )
-}
 
-export default InvertedCursor
+  return (
+    <div className="relative h-full">
+      <div
+        ref={circle}
+        style={{
+          width: size,
+          height: size,
+        }}
+        className="top-0 left-0 fixed rounded-full bg-typeface-1 pointer-events-none mix-blend-difference z-[100]"
+      />
+    </div>
+  );
+}

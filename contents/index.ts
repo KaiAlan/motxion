@@ -39,9 +39,9 @@ export const pageContent: contentType[] = [
     {
         slugName: 'trailing-cursor',
         slugContent: trailingCursorPageContent,
-        contentTitle: 'Traailing Cursor',
+        contentTitle: 'Trailing Cursor',
         contentDescription: 'A customizable trailing cursor effect that follows the mouse position with a smooth transition.',
-        note: 'Adjust the posX and posY values to customize the cursor\'s trailing effect relative to the mouse position. Default values are set to 500 and 300, but feel free to modify them by passing them as parameters to the component.',
+        note: 'Adjust the posX and posY values to customize the cursor\'s trailing effect relative to the mouse position. Default values are set to 150, but feel free to modify them by passing them as parameters to the component.',
         contentTag: ["Trailing Cursor", "Cursor Effect", "Cursor Follow"]
     },
 ]

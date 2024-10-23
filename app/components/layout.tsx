@@ -2,7 +2,7 @@ import Sidebar from "@/components/sidebar";
 
 export default function ComponentsPageLayout({ children }: { children: React.ReactNode }) {
   return (
-    <section className="flex mt-8 relative">
+    <section className="flex mt-8 relative scroll-smooth">
         <aside className="hidden w-72 h-[calc(100vh-theme(spacing.40))] desktop:flex flex-col justify-start items-start sticky top-24 overflow-y-scroll">
         <Sidebar />
         </aside>

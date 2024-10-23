@@ -104,6 +104,33 @@ const installationInstructions: InstructionType[] = [
         language: "ts",
     },
     {
+      instruction: "Add the hook.",
+      description: "Add this useMousePosition hook file.",
+      instructionCode: `'use client'
+
+import { useState, useEffect } from "react";
+
+const useMousePosition = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const updateMousePosition = (e: any) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", updateMousePosition);
+
+    return () => window.removeEventListener("mousemove", updateMousePosition);
+  }, []);
+
+  return mousePosition;
+};
+
+export default useMousePosition;`,
+      language: "tsx",
+      fileName: "hooks/useMousePosition.tsx"
+    },
+    {
         instruction: "Copy the source code",
         instructionCode: `import { motion } from "framer-motion";
 import useMousePosition from "@/hooks/useMousePosition";

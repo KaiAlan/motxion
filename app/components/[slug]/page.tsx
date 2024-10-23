@@ -18,7 +18,7 @@ export default async function MaskCursorPage({ params }: { params: { slug: strin
   }
 
   return (
-    <div className="flex max-w-[1176px] relative">
+    <div className="flex max-w-[1176px] relative scroll-smooth">
       <div className="w-[900px]">
         <div id="preview" />
         <Heading

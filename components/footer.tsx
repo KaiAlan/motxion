@@ -5,7 +5,7 @@ import { Separator } from "./ui/separator";
 
 const Footer = () => {
   return (
-    <footer className="w-full z-30 cursor-none">
+    <footer className="w-full z-30">
       <Separator className="w-full" />
       <div className="max-w-[1512px] w-full flex flex-col justify-start items-start gap-6 px-8 py-20 mx-auto">
         <div className="w-full flex justify-center items-center">

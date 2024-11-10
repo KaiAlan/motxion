@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import Lenis from 'lenis'
-import { useEffect, useRef } from 'react';
+import Lenis from "lenis";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function InvertedCursor() {
@@ -38,6 +38,12 @@ export default function InvertedCursor() {
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
+
+    // Cleanup function to stop the Lenis instance and cancel the animation frame
+    return () => {
+      lenis.destroy(); // Stop Lenis
+      cancelAnimationFrame(raf as any); // Cancel the requestAnimationFrame
+    };
   }, []);
 
   return (

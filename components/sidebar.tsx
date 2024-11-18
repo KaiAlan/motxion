@@ -67,6 +67,7 @@ const Sidebar = () => {
                 <Link
                   key={idx}
                   href={navItem.href}
+                  prefetch={true}
                   // aria-disabled={navItem.disabled}
                   // onMouseEnter={() => console.log(val)}
                   className={cn(

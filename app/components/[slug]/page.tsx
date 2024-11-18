@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 
 
-export default async function MaskCursorPage({ params }: { params: { slug: string } }) {
+export default  function ComponentPage({ params }: { params: { slug: string } }) {
 
   const content: contentType | undefined = pageContent.find((content) => content.slugName === params.slug)
 
